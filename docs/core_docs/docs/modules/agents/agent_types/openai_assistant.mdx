@@ -62,6 +62,16 @@ const assistant = new OpenAIAssistantRunnable({
 });
 ```
 
+If you have an existing thread id, you can pass it when invoking the assistant:
+
+```typescript
+const assistantResponse = await assistant.invoke({
+  thread_id: "thread_wKpj4cu1XaYEVeJlx4yFbWx5",
+  // use `threadId` if `asAgent` is true
+  content: "Hello world!",
+});
+```
+
 In this next example we'll show how you can turn your assistant into an agent.
 
 ## Assistant as an agent
